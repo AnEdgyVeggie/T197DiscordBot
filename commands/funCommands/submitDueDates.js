@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('submit_due_dates')
-        .setDescription('Submit new due date')
+        .setName('due_dates_submit')
+        .setDescription('Submit new due date entry')
         .addStringOption(option =>
             option.setName('course_name')
                 .setDescription('Enter course name')
@@ -13,7 +13,8 @@ module.exports = {
                     {name: 'Java', value: 'Java'},
                     {name: 'PHP', value: 'PHP'},
                     {name: 'OOP', value: 'OOP'},
-                    {name: 'Systems Analysis', value: 'Systems Analysis'}
+                    {name: 'Systems Analysis', value: 'Systems Analysis'},
+                    {name: 'Database', value: 'Database'}
                 ))
         .addStringOption(option =>
             option.setName('assignment_type')
@@ -26,49 +27,39 @@ module.exports = {
                 ))
         .addStringOption(option =>
             option.setName('due_date')
-                .setDescription('Enter due date (e.g., YYYY-MM-DD)')
+                .setDescription('Enter due date (e.g., Oct 5, 8pm')
                 .setRequired(true)),
     async execute(interaction) {
-        ////////////////////////////////////Verification block///////////////////////////////////////////
+        /////////////////////////////////////////Verification block/////////////////////////////////////////////
         const user = interaction.user.username;
-        const role = interaction.member.roles.cache
-        let permission = false;
-        // checks each of your roles to see if any of your toles match Botters or trust
-        role.forEach(element => {
-            if (element.name === "Botters" || element.name === "trust")
-                permission = true
-        })
-        // if you had the necessary role, this will be enabled
-        if (!permission) {
-            // if you don't have permissions, go away
-            await interaction.reply(`# Sorry ${user},\n you do not have bot permissions\n # PERMISSION DENIED`);
+        const memberRoles = interaction.member.roles.cache;
+        const hasPermission = memberRoles.some(role => role.name === "Botters" || role.name === "trust");
+
+        if (!hasPermission) {
+            await interaction.reply(`Sorry ${user}, you do not have permission to use this command.`);
             return;
         }
-        /////////////////////////////////////End of verification block///////////////////////////////////
+        ///////////////////////////////////////////End verification block/////////////////////////////////////////
         const courseName = interaction.options.getString('course_name');
         const courseType = interaction.options.getString('assignment_type');
         const dueDate = interaction.options.getString('due_date');
+
         console.log(`User entered Text 1: ${courseName}`);
         console.log(`User entered Text 2: ${courseType}`);
-        console.log(`User entered Text 2: ${dueDate}`);
+        console.log(`User entered Text 3: ${dueDate}`);
 
-        // Inside the execute function, after getting the inputs
         const dueDateEntry = `${courseName}: ${courseType} due on ${dueDate}\n`;
 
-        let path = './records/assignment.txt';
-        if (courseType.toLowerCase() === 'test') {
-            path = './records/test.txt';
-        } else if (courseType.toLowerCase() === 'lab') {
-            path = './records/lab.txt';
-        }
+        const filePath = `./records/${courseType.toLowerCase()}.txt`;
 
-        fs.appendFile(path, dueDateEntry, (err) => {
+        fs.appendFile(filePath, dueDateEntry, (err) => {
             if (err) {
                 console.error('Error writing due date to file:', err);
+                interaction.reply('An error occurred while updating due dates.');
             } else {
                 console.log('Due date written to file successfully.');
+                interaction.reply(`Thanks for updating. Course Name: ${courseName}, Type: ${courseType}, Due: ${dueDate}`);
             }
         });
-        await interaction.reply(`Thanks for updating. Coursename: ${courseName}, Type: ${courseType}, Due: ${dueDate}`);
     }
 }
