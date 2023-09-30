@@ -49,7 +49,7 @@ module.exports = {
                 return;
             }
 
-            // Parse the existing due dates (assuming each entry is on a separate line)
+            // Parse the existing due dates
             const dueDates = data.split('\n');
 
             // Filter out the due dates that match the course name and type
@@ -58,7 +58,7 @@ module.exports = {
                 const entryCourseName = parts[0].trim();
                 const entryCourseType = parts[1] ? parts[1].split('due on')[0].trim() : '';
 
-                return entryCourseName === courseName && entryCourseType === courseType;
+                return !(entryCourseName === courseName && entryCourseType === courseType);
             });
 
             // Join the filtered due dates back into a string
