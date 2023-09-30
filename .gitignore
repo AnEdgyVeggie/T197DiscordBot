@@ -8,3 +8,6 @@
 /dataSources.local.xml
 *.env
 /node_modules
+*.env.edgy
+*.env.n197
+/records/

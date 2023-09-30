@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('atklass_code')
+        .setName('atklass')
         .setDescription('See atklass codes'),
     async execute(interaction) {
         // File paths

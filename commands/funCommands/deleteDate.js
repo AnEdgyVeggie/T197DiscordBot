@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('due_dates_submit')
-        .setDescription('Submit new due date entry')
+        .setName('due_dates_delete')
+        .setDescription('Delete due date by course name and type')
         .addStringOption(option =>
             option.setName('course_name')
                 .setDescription('Enter course name')
@@ -24,11 +24,7 @@ module.exports = {
                     { name: 'Test', value: 'test' },
                     { name: 'Assignment', value: 'assignment' },
                     { name: 'Lab', value: 'lab' }
-                ))
-        .addStringOption(option =>
-            option.setName('due_date')
-                .setDescription('Enter due date (e.g., Oct 5, 8pm')
-                .setRequired(true)),
+                )),
     async execute(interaction) {
         /////////////////////////////////////////Verification block/////////////////////////////////////////////
         const user = interaction.user.username;
@@ -40,26 +36,44 @@ module.exports = {
             return;
         }
         ///////////////////////////////////////////End verification block/////////////////////////////////////////
+
         const courseName = interaction.options.getString('course_name');
         const courseType = interaction.options.getString('assignment_type');
-        const dueDate = interaction.options.getString('due_date');
-
-        console.log(`User entered Text 1: ${courseName}`);
-        console.log(`User entered Text 2: ${courseType}`);
-        console.log(`User entered Text 3: ${dueDate}`);
-
-        const dueDateEntry = `\n${courseName}: ${courseType} due on ${dueDate}`;
 
         const filePath = `./records/${courseType.toLowerCase()}.txt`;
 
-        fs.appendFile(filePath, dueDateEntry, (err) => {
+        fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
-                console.error('Error writing due date to file:', err);
-                interaction.reply('An error occurred while updating due dates.');
-            } else {
-                console.log('Due date written to file successfully.');
-                interaction.reply(`Thanks for updating. Course Name: ${courseName}, Type: ${courseType}, Due: ${dueDate}`);
+                console.error('Error reading due dates file:', err);
+                interaction.reply('An error occurred while reading due dates.');
+                return;
             }
+
+            // Parse the existing due dates
+            const dueDates = data.split('\n');
+
+            // Filter out the due dates that match the course name and type
+            const filteredDueDates = dueDates.filter(dueDate => {
+                const parts = dueDate.split(':');
+                const entryCourseName = parts[0].trim();
+                const entryCourseType = parts[1] ? parts[1].split('due on')[0].trim() : '';
+
+                return !(entryCourseName === courseName && entryCourseType === courseType);
+            });
+
+            // Join the filtered due dates back into a string
+            const updatedDueDates = filteredDueDates.join('\n');
+
+            // Write the updated due dates back to the file
+            fs.writeFile(filePath, updatedDueDates, 'utf8', (err) => {
+                if (err) {
+                    console.error('Error writing due dates file:', err);
+                    interaction.reply('An error occurred while deleting due dates.');
+                    return;
+                }
+                console.log('Due dates deleted successfully.');
+                interaction.reply(`Due dates for Course Name: ${courseName}, Type: ${courseType} have been deleted.`);
+            });
         });
     }
 }

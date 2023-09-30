@@ -1,0 +1,11 @@
+Index: .env.edgy
+===================================================================
+diff --git a/.env.edgy b/.env.edgy
+deleted file mode 100644
+--- a/.env.edgy	(revision 0778e2f73d746b7c7b3fbfaba728d3c309065df3)
++++ /dev/null	(revision 0778e2f73d746b7c7b3fbfaba728d3c309065df3)
+@@ -1,3 +0,0 @@
+-TOKEN = "MTEzMzg2NjA5OTU1Mzg2OTg1NA.Gtflu0.DV4Jj_CTazxBlby8lF96-zmPGGoSUdYzMpyrNA"
+-CLIENT_ID = "1133866099553869854"
+-GUILD_ID =  "703026261550956644"
+\ No newline at end of file
