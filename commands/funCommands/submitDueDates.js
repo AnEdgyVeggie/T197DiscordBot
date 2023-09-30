@@ -13,6 +13,7 @@ module.exports = {
                     {name: 'Java', value: 'Java'},
                     {name: 'PHP', value: 'PHP'},
                     {name: 'OOP', value: 'OOP'},
+                    {name: 'Database', value: 'Database'},
                     {name: 'Systems Analysis', value: 'Systems Analysis'}
                 ))
         .addStringOption(option =>
