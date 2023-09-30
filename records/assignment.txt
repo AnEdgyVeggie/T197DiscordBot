@@ -1,4 +1,1 @@
-#ASSIGNMENTS DUE:
-Java:assignment due on Oct 20, 2085
-Hoola Hoop:assignment due on Oct 88, 2055
-COMP2129: assignment due on Oct 6, 8pm
+### Assignments:

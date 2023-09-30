@@ -1,4 +1,1 @@
-#LABS DUE:
-Database:lab due on Never
-test: lab due on oct 5 , 2022
-blabla: lab due on right now!!!
+### Labs:
