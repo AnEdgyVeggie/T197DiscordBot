@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('comp1230')
-        .setDescription('Information about COMP1230'),
+        .setName('comp2129')
+        .setDescription('Information about COMP2129.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -14,9 +14,9 @@ module.exports = {
 
         // Variables for retrieving due dates.
         let lines;
-        let phpAssignmentLines = [],
-            phpTestLines = [],
-            phpLabLines = [];
+        let oopAssignmentLines = [];
+        let oopTestLines = [];
+        let oopLabLines = [];
 
         // Splitting assignment lines by specific class.
         const splitAssignmentLines = () => {
@@ -29,24 +29,25 @@ module.exports = {
 
                         // Push lines for this specific class into its own array.
                         for (let i = 0; i < lines.length; i++) {
-                            if (lines[i].includes('PHP')) {
-                                phpAssignmentLines.push('\n' + lines[i]);
-                                resolve(phpAssignmentLines);
+                            if (lines[i].includes('OOP')) {
+                                oopAssignmentLines.push('\n' + lines[i]);
+                                resolve(oopAssignmentLines);
                             }
                         }
 
                         // If array is empty, push a message confirming no due items.
-                        if (phpAssignmentLines.length == 0) {
-                            phpAssignmentLines.push('\nNone!');
-                            resolve(phpAssignmentLines);
+                        if (oopAssignmentLines.length == 0) {
+                            oopAssignmentLines.push("\nNone!");
+                            resolve(oopAssignmentLines);
                         }
+
                     }
                 });
             });
         }
 
-         // Splitting test lines by specific class.
-         const splitTestLines = () => {
+        // Splitting test lines by specific class.
+        const splitTestLines = () => {
             return new Promise((resolve, reject) => {
                 fs.readFile(testPath, 'utf-8', (err, data) => {
                     if (err) {
@@ -56,16 +57,16 @@ module.exports = {
                         
                         // Push lines for this specific class into its own array.
                         for (let i = 0; i < lines.length; i++) {
-                            if (lines[i].includes('PHP')) {
-                                phpTestLines.push('\n' + lines[i]);
-                                resolve(phpTestLines);
+                            if (lines[i].includes('OOP')) {
+                                oopTestLines.push('\n' + lines[i]);
+                                resolve(oopTestLines);
                             }
                         }
                         
                         // If array is empty, push a message confirming no due items.
-                        if (phpTestLines.length == 0) {
-                            phpTestLines.push("\nNone!");
-                            resolve(phpTestLines);
+                        if (oopTestLines.length == 0) {
+                            oopTestLines.push("\nNone!");
+                            resolve(oopTestLines);
                         }
                     }
                 });
@@ -83,16 +84,16 @@ module.exports = {
                         
                         // Push lines for this specific class into its own array.
                         for (let i = 0; i < lines.length; i++) {
-                            if (lines[i].includes('PHP')) {
-                                phpLabLines.push('\n' + lines[i]);
-                                resolve(phpLabLines);
+                            if (lines[i].includes('OOP')) {
+                                oopLabLines.push('\n' + lines[i]);
+                                resolve(oopLabLines);
                             }
                         }
                         
                         // If array is empty, push a message confirming no due items.
-                        if (phpLabLines.length == 0) {
-                            phpLabLines.push("\nNone!");
-                            resolve(phpLabLines);
+                        if (oopLabLines.length == 0) {
+                            oopLabLines.push("\nNone!");
+                            resolve(oopLabLines);
                         }
                     }
                 });
@@ -107,16 +108,13 @@ module.exports = {
                 splitLabLines()
             ]);
 
-        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/130932/viewContent/7614628/View\n" +
-                                "```" + `Professor: Maziar Masoudi\n` + 
-                                `Professor Contact: mmasoudi@georgebrown.ca\n` +
-                                `Lab Professor: Maziar Sojoudian\n` +
-                                `Lab Professor Contact: Maziar.Sojoudian@georgebrown.ca\n` +
-                                `Class Times:\n` + 
-                                `[Wednesday 8:00AM - 10:00AM] [Thursday 8:00AM - 10:00AM]\n` + "```" + 
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/130935/viewContent/7639449/View\n" +
+                                "```" + `Professor: Houman Haji\n` + 
+                                `Professor Contact: Houman.Haji@georgebrown.ca\n` +
+                                `Class Times: Thursday 11:00AM - 3:00PM\n` + "```" + 
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");
 
-    }
+    } 
 }
