@@ -1,5 +1,5 @@
 ### Assignments:
 
 OOP: assignment due on oct 6, 8pm
-PHP: assignment due on oct 8
 Java: assignment due on oct 15
+PHP: assignment due on October 15, 2023, 11:59 PM

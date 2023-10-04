@@ -16,7 +16,9 @@ module.exports = {
                 .addChoices(
                     { name: 'ADV OBJECT-ORIENT.PROGRAMMING', value: 'ADV OBJECT-ORIENT.PROGRAMMING' },
                     { name: 'SYS ANALYSIS, DESN AND TESTING', value: 'SYS ANALYSIS, DESN AND TESTING' },
-                    { name: 'ADVANCED WEB PROGRAMMING', value: 'ADVANCED WEB PROGRAMMING' }
+                    { name: 'ADV WEB PROGRAMMING', value: 'ADV WEB PROGRAMMING' },
+                    { name: 'ADV DATABASE MANAGEMENT', value: 'ADV DATABASE MANAGEMENT' },
+                    { name: 'APPLICATION DEV. WITH JAVA', value: 'APPLICATION DEV. WITH JAVA' }
                 )),
     async execute(interaction) {
         const atklassCode = interaction.options.getString('atklass_code').toUpperCase();
