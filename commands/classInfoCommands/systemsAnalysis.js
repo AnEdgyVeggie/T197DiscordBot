@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('systems-analysis')
+        .setName('systems_analysis')
         .setDescription('Information about COMP2147: Systems Analysis.'),
     async execute(interaction) {
 
@@ -29,7 +29,7 @@ module.exports = {
         
                     // Push lines for specific class into own array.
                     for (let i = 0; i < lines.length; i++) {
-                        if (lines[i].includes('OOP')) {
+                        if (lines[i].includes('Systems')) {
                             systemsLines.push('\n' + lines[i]);
                             resolve(systemsLines);
                         }
