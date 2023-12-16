@@ -4,7 +4,7 @@ const fs = require('fs');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('webdev')
-        .setDescription('Information about COMP1230: Advanced Web Development.'),
+        .setDescription('Information about COMP2139: Web Application Development.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -14,11 +14,11 @@ module.exports = {
 
         // Variables for retrieving due dates.
         let lines;
-        let phpAssignmentLines = [],
-            phpTestLines = [],
-            phpLabLines = [];
+        let assignmentLines = [];
+        let testLines = [];
+        let labLines = [];
 
-        const splitLines = (phpLines, path) => {
+        const splitLines = (dataLines, path) => {
             return new Promise((resolve, reject) => {
                 fs.readFile(path, 'utf-8', (err, data) => {
                     if (err) {
@@ -29,16 +29,16 @@ module.exports = {
         
                     // Push lines for specific class into own array.
                     for (let i = 0; i < lines.length; i++) {
-                        if (lines[i].includes('PHP')) {
-                            phpLines.push('\n' + lines[i]);
-                            resolve(phpLines);
+                        if (lines[i].includes('Systems')) {
+                            dataLines.push('\n' + lines[i]);
+                            resolve(dataLines);
                         }
                     }
         
                     // If array is empty, push message confirming no due items.
-                    if (phpLines.length == 0) {
-                        phpLines.push('\nNone!');
-                        resolve(phpLines);
+                    if (dataLines.length == 0) {
+                        dataLines.push('\nNone!');
+                        resolve(dataLines);
                     }
         
                 })
@@ -47,19 +47,16 @@ module.exports = {
 
         // Assign to variables to push in the command output.
         const [labData, testData, assignmentData] = await Promise.all([
-            splitLines(phpLabLines, labPath),            
-            splitLines(phpTestLines, testPath),
-            splitLines(phpAssignmentLines, assignmentPath)
+            splitLines(labLines, labPath),            
+            splitLines(testLines, testPath),
+            splitLines(assignmentLines, assignmentPath)
         ]);
 
 
-        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/130932/viewContent/7614628/View\n" +
-                                "```" + `Professor: Maziar Masoudi\n` + 
-                                `Professor Contact: mmasoudi@georgebrown.ca\n` +
-                                `Lab Professor: Maziar Sojoudian\n` +
-                                `Lab Professor Contact: Maziar.Sojoudian@georgebrown.ca\n` +
-                                `Class Times:\n` + 
-                                `[Wednesday 8:00AM - 10:00AM] [Thursday 8:00AM - 10:00AM]\n` + "```" + 
+        await interaction.reply("CSI: null\n" +
+                                "```" + `Professor: Sergio Santilli\n` + 
+                                `Professor Contact: Sergio.Santilli@georgebrown.ca\n` +
+                                `Class Times: null\n` + "```" + 
                                 "```" + `Upcoming Assignments: ${phpAssignmentLines}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${phpTestLines}\n` + "```" +
                                 "```" + `Upcoming Labs: ${phpLabLines}` + "```");
