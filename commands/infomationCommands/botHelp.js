@@ -15,7 +15,7 @@ module.exports = {
             "```" + `/agile              ‣ View course information for Agile Software Development.\n` + "```" +
             "```" + `/data_structs       ‣ View course information for Data Structures and Algorithms.\n` + "```" +
             "```" + `/open_source        ‣ View course information for Open Source Development.\n` + "```" +
-            "```" + `/webdev             ‣ View course information for Web Application Development.\n` + "```" +
+            "```" + `/web_app_dev             ‣ View course information for Web Application Development.\n` + "```" +
             "```" + `/workplace_comp     ‣ View course information for Professional Workplace Compentencies.\n` + "```"
          )
     }

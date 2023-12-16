@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('webdev')
+        .setName('web_app_dev')
         .setDescription('Information about COMP2139: Web Application Development.'),
     async execute(interaction) {
 

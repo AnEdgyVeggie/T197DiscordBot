@@ -56,7 +56,7 @@ module.exports = {
         await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/131034/viewContent/7151823/View\n" +
                                 "```" + `Professor: Reza Dibaj\n` + 
                                 `Professor Contact: Reza.Dibaj@georgebrown.ca\n` +
-                                `Professor: Maziar Sojoudian` +
+                                `Professor: Maziar Sojoudian\n` +
                                 `Professor Contact: Maziar.Soujoudian@georgebrown.ca\n` + 
                                 `Class Times: null\n` + "```" + 
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
