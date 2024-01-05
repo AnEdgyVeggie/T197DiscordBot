@@ -59,8 +59,8 @@ module.exports = {
                                 `Professor: Farzin Rasooli\n` + 
                                 `Professor Contact: Farzin.Rasooli@georgebrown.ca\n` +
                                 `Class Times:\n` +  
-                                `     Monday: 8:00 - 10:00\n` + 
-                                `     Tuesday: 10:00 - 12:00\n` + "```" +
+                                `              Monday: 8:00 - 10:00\n` + 
+                                `              Tuesday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentLines}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testLines}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labLines}` + "```");
