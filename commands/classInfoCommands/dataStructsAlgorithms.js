@@ -55,7 +55,9 @@ module.exports = {
         await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/118782/viewContent/7646266/View\n" +
                                 "```" + `Professor: Andrew Rudder\n` + 
                                 `Professor Contact: Andrew.Rudder@georgebrown.ca\n` +
-                                `Class Times: null\n` + "```" + 
+                                `Class Times:\n` +
+                                `     Monday: 10:00 - 12:00\n` +
+                                `     Wednesday: 10:00 - 12:00\n` +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");
