@@ -60,7 +60,7 @@ module.exports = {
                                 `Professor Contact: Farzin.Rasooli@georgebrown.ca\n` +
                                 `Class Times:\n` +  
                                 `     Monday: 8:00 - 10:00\n` + 
-                                `     Tuesday: 10:00 - 12:00\n` +
+                                `     Tuesday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${phpAssignmentLines}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${phpTestLines}\n` + "```" +
                                 "```" + `Upcoming Labs: ${phpLabLines}` + "```");

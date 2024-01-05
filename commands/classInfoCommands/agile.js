@@ -60,7 +60,7 @@ module.exports = {
                                 `Professor Contact: Bernie.Cablin@georgebrown.ca\n` +
                                 `Class Times:\n` +  
                                 `     Wednesday: 12:00 - 2:00\n` + 
-                                `     Wednesday: 3:00 - 5:00\n` +
+                                `     Wednesday: 3:00 - 5:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");

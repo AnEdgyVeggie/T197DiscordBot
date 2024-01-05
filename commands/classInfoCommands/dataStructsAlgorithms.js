@@ -57,7 +57,7 @@ module.exports = {
                                 `Professor Contact: Andrew.Rudder@georgebrown.ca\n` +
                                 `Class Times:\n` +
                                 `     Monday: 10:00 - 12:00\n` +
-                                `     Wednesday: 10:00 - 12:00\n` +
+                                `     Wednesday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");
