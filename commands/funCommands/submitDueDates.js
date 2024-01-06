@@ -10,11 +10,11 @@ module.exports = {
                 .setDescription('Enter course name')
                 .setRequired(true)
                 .addChoices(
-                    {name: 'Java', value: 'Java'},
-                    {name: 'PHP', value: 'PHP'},
-                    {name: 'OOP', value: 'OOP'},
-                    {name: 'Systems Analysis', value: 'Systems Analysis'},
-                    {name: 'Database', value: 'Database'}
+                    {name: 'Web App', value: 'Web App'},
+                    {name: 'Data Structures', value: 'Data Structures'},
+                    {name: 'Workplace Comp', value: 'Workplace Comp'},
+                    {name: 'Agile', value: 'Agile'},
+                    {name: 'Open Source', value: 'Open Source'}
                 ))
         .addStringOption(option =>
             option.setName('assignment_type')
