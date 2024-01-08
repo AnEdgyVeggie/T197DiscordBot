@@ -53,7 +53,7 @@ module.exports = {
         ]);
 
 
-        await interaction.reply("CSI: N/A yet\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/215730/viewContent/8238493/View\n" +
                                 "```" + `Professor: Reza Dibaj\n` + 
                                 `Professor Contact: Reza.Dibaj@georgebrown.ca\n` +
                                 `Professor: Maziar Sojoudian\n` +
