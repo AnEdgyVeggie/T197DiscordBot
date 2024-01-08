@@ -52,7 +52,7 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/118782/viewContent/7646266/View\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/214049/viewContent/7922813/View\n" +
                                 "```" + `Professor: Andrew Rudder\n` + 
                                 `Professor Contact: Andrew.Rudder@georgebrown.ca\n` +
                                 `Class Times:\n` +

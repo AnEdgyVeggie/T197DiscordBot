@@ -53,7 +53,7 @@ module.exports = {
         ]);
 
 
-        await interaction.reply("CSI: null\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/222997/viewContent/8160462/View\n" +
                                 "```" + `Professor: Sergio Santilli\n` + 
                                 `Professor Contact: Sergio.Santilli@georgebrown.ca\n` +
                                 `Professor: Farzin Rasooli\n` + 

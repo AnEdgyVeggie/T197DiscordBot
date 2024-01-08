@@ -52,7 +52,7 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: null\n" +
+        await interaction.reply("CSI: N/A yet\n" +
                                 "```" + `Professor: Jeffrey Bulmer\n` + 
                                 `Professor Contact: Jeffrey.Bulmer@georgebrown.ca\n` +
                                 `Class Times:\n` +  

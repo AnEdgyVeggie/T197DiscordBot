@@ -53,7 +53,7 @@ module.exports = {
         ]);
 
 
-        await interaction.reply("CSI: null\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/214352/viewContent/8219216/View\n" +
                                 "```" + `Professor: Abid Rana\n` + 
                                 `Professor Contact: Abid.Rana@georgebrown.ca\n` +
                                 `Professor: Bernie Cablin\n` + 
