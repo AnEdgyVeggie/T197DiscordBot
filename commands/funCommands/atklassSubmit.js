@@ -14,11 +14,11 @@ module.exports = {
                 .setDescription('Choose which class you want to submit the code to')
                 .setRequired(true)
                 .addChoices(
-                    {name: 'Web App', value: 'Web App'},
-                    {name: 'Data Structures', value: 'Data Structures'},
-                    {name: 'Workplace Comp', value: 'Workplace Comp'},
-                    {name: 'Agile', value: 'Agile'},
-                    {name: 'Open Source', value: 'Open Source'}
+                    {name: 'Web App Development'.toUpperCase(), value: 'Web App Development'.toUpperCase()},
+                    {name: 'Data Structures and Algorithms'.toUpperCase(), value: 'Data Structures and Algorithmss'.toUpperCase()},
+                    {name: 'Workplace Comp'.toUpperCase(), value: 'Workplace Comp'.toUpperCase()},
+                    {name: 'Agile'.toUpperCase(), value: 'Agile'.toUpperCase()},
+                    {name: 'Open Source Development'.toUpperCase(), value: 'Open Source Development'.toUpperCase()}
                 )),
     async execute(interaction) {
         const atklassCode = interaction.options.getString('atklass_code').toUpperCase();
