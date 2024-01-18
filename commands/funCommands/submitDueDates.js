@@ -25,14 +25,15 @@ module.exports = {
                     { name: 'Assignment', value: 'assignment' },
                     { name: 'Lab', value: 'lab' }
                 ))
-        .addStringOption(option => 
-            option.setName('description')
-                .setDescription('What type of assignment is this')
-                .setRequired(false))
+
         .addStringOption(option =>
             option.setName('due_date')
                 .setDescription('Enter due date (e.g., Oct 5, 8pm')
-                .setRequired(true)),
+                .setRequired(true))
+                .addStringOption(option =>
+                    option.setName('description')
+                        .setDescription('Enter description')
+                        .setRequired(false)),
     async execute(interaction) {
         /////////////////////////////////////////Verification block/////////////////////////////////////////////
         const user = interaction.user.username;
