@@ -31,9 +31,9 @@ module.exports = {
                 .setDescription('Enter due date (e.g., Oct 5, 8pm')
                 .setRequired(true))
                 .addStringOption(option =>
-                    option.setName('description')
-                        .setDescription('Enter description')
-                        .setRequired(false)),
+            option.setName('description')
+                .setDescription('Enter description')
+                .setRequired(false)),
     async execute(interaction) {
         /////////////////////////////////////////Verification block/////////////////////////////////////////////
         const user = interaction.user.username;
@@ -48,12 +48,14 @@ module.exports = {
         const courseName = interaction.options.getString('course_name');
         const courseType = interaction.options.getString('assignment_type');
         const dueDate = interaction.options.getString('due_date');
+        const desc = interaction.options.getString("description");
 
         console.log(`User entered Text 1: ${courseName}`);
         console.log(`User entered Text 2: ${courseType}`);
         console.log(`User entered Text 3: ${dueDate}`);
+        console.log(`User entered Text 4: ${desc}`);
 
-        const dueDateEntry = `\n${courseName}: ${courseType} due on ${dueDate}`;
+        const dueDateEntry = `\n${courseName}: ${courseType} (${desc}) due on ${dueDate}`;
 
         const filePath = `./records/${courseType.toLowerCase()}.txt`;
 
