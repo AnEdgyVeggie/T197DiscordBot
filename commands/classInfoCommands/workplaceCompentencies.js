@@ -52,11 +52,11 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: N/A yet\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/196002/viewContent/8304865/View\n" +
                                 "```" + `Professor: Jeffrey Bulmer\n` + 
                                 `Professor Contact: Jeffrey.Bulmer@georgebrown.ca\n` +
                                 `Class Times:\n` +  
-                                `              Tuesday: 3:00 - 6:00\n` + "```" +
+                                `Tuesday: 3:00 - 6:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");

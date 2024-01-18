@@ -59,8 +59,8 @@ module.exports = {
                                 `Professor: Maziar Sojoudian\n` +
                                 `Professor Contact: Maziar.Soujoudian@georgebrown.ca\n` + 
                                 `Class Times:\n` +  
-                                `              Monday: 2:00 - 4:00\n` + 
-                                `              Tuesday: 12:00 - 2:00\n` + "```" +
+                                `Monday: 2:00 - 4:00\n` + 
+                                `Tuesday: 12:00 - 2:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");
