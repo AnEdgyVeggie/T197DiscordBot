@@ -54,6 +54,7 @@ module.exports = {
 
 
         await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/215730/viewContent/8238493/View\n" +
+                                "LECTURE VIDEOS: https://www.youtube.com/playlist?list=PL5CXJP7BfMXSkvKdoXGUMn_wBTeyd42wN\n" + 
                                 "```" + `Professor: Reza Dibaj\n` + 
                                 `Professor Contact: Reza.Dibaj@georgebrown.ca\n` +
                                 `Professor: Maziar Sojoudian\n` +
