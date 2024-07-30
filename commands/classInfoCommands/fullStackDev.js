@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('workplace_comp')
-        .setDescription('Information about COMP2148: Professional Workplace Compentencies.'),
+        .setName('fullstack')
+        .setDescription('Information about COMP2148: Full Stack Development I.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -52,11 +52,15 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/196002/viewContent/8304865/View\n" +
-                                "```" + `Professor: Jeffrey Bulmer\n` + 
-                                `Professor Contact: Jeffrey.Bulmer@georgebrown.ca\n` +
+        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+                                "```" + `Professor: Pritesh Patel\n` + 
+                                `Professor Contact: pritesh.patel2@georgebrown.ca\n` +
+                                "```" + `Professor: Mohammed Tawalbeh\n` + 
+                                `Professor Contact: mohammed.tawalbeh@georgebrown.ca\n` +
+                                `CRN: 18346\n` +  
                                 `Class Times:\n` +  
-                                `Tuesday: 3:00 - 6:00\n` + "```" +
+                                `Thursdayday: 6:00 - 8:00\n` + 
+                                `Friday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");

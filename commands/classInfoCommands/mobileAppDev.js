@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('web_app_dev')
-        .setDescription('Information about COMP3095: Web Application Development with Java.'),
+        .setName('mobile_app_dev')
+        .setDescription('Information about COMP3074: Mobile Application Development.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -29,7 +29,7 @@ module.exports = {
         
                     // Push lines for specific class into own array.
                     for (let i = 0; i < lines.length; i++) {
-                        if (lines[i].includes('Web')) {
+                        if (lines[i].includes('Agile')) {
                             dataLines.push('\n' + lines[i]);
                             resolve(dataLines);
                         }
@@ -54,15 +54,15 @@ module.exports = {
 
 
         await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
-                                "```" + `Professor: Sergio Santilli\n` + 
-                                `Professor Contact: Sergio.Santilli@georgebrown.ca\n` +
-                                `CRN: 18344\n` +  
+                                "```" + `Professor: Przemyslaw Pawluk\n` + 
+                                `Professor Contact: ppawluk@georgebrown.ca\n` +
+                                `CRN: 18343\n` +  
                                 `Class Times:\n` +  
-                                `Monday: 8:00 - 10:00\n` + 
-                                `Thursday: 8:00 - 10:00\n` + "```" +
-                                "```" + `Upcoming Assignments: ${assignmentLines}\n` + "```" + 
-                                "```" + `Upcoming Tests: ${testLines}\n` + "```" +
-                                "```" + `Upcoming Labs: ${labLines}` + "```");
+                                `Monday: 10:00 - 12:00\n` + 
+                                `Tuesday: 12:00 - 2:00\n` + "```" +
+                                "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
+                                "```" + `Upcoming Tests: ${testData}\n` + "```" +
+                                "```" + `Upcoming Labs: ${labData}` + "```");
 
-    }
+    } 
 }

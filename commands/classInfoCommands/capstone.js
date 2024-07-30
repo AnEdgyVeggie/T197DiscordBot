@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('data_structs')
-        .setDescription('Information about COMP2080: Data Structures and Algorithms.'),
+        .setName('capstone')
+        .setDescription('Information about COMP3074: Capstone Project I.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -52,12 +52,13 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/214049/viewContent/7922813/View\n" +
-                                "```" + `Professor: Andrew Rudder\n` + 
-                                `Professor Contact: Andrew.Rudder@georgebrown.ca\n` +
+        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+                                "```" + `Professor: Anjana Shah\n` + 
+                                `Professor Contact: Ashah@georgebrown.ca\n` +
+                                `CRN: 18341\n` +  
                                 `Class Times:\n` +
-                                `Monday: 10:00 - 12:00\n` +
-                                `Wednesday: 10:00 - 12:00\n` + "```" +
+                                `Monday: 2:00 - 4:00\n` +
+                                `Thursday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");

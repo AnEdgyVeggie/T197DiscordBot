@@ -3,8 +3,8 @@ const fs = require('fs');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('agile')
-        .setDescription('Information about COMP2151: Agile Software Development.'),
+        .setName('data_science')
+        .setDescription('Information about COMP3122: Applied Data Science.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -29,7 +29,7 @@ module.exports = {
         
                     // Push lines for specific class into own array.
                     for (let i = 0; i < lines.length; i++) {
-                        if (lines[i].includes('Agile')) {
+                        if (lines[i].includes('Open')) {
                             dataLines.push('\n' + lines[i]);
                             resolve(dataLines);
                         }
@@ -53,14 +53,14 @@ module.exports = {
         ]);
 
 
-        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/214352/viewContent/8219216/View\n" +
-                                "```" + `Professor: Abid Rana\n` + 
-                                `Professor Contact: Abid.Rana@georgebrown.ca\n` +
-                                `Professor: Bernie Cablin\n` + 
-                                `Professor Contact: Bernie.Cablin@georgebrown.ca\n` +
+        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+                                "LECTURE VIDEOS: https://www.youtube.com/playlist?list=PL5CXJP7BfMXSkvKdoXGUMn_wBTeyd42wN\n" + 
+                                "```" + `Professor: Reza Dibaj\n` + 
+                                `Professor Contact: Reza.Dibaj@georgebrown.ca\n` +
+                                `CRN: 18345\n` +  
                                 `Class Times:\n` +  
-                                `Wednesday: 12:00 - 2:00\n` + 
-                                `Wednesday: 8:00 - 10:00\n` + "```" +
+                                `Monday: 4:00 - 5:00\n` + 
+                                `Wednesday: 10:00 - 1:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");
