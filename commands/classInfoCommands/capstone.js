@@ -52,10 +52,8 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        
-
         await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
-                                "```" + `Professor: Anjana Shah\n` + 
+                                "```" + `Professor: Anjana Sha\n` + 
                                 `Professor Contact: Ashah@georgebrown.ca\n` +
                                 "```" + `Professor: Laily Ajellu\n` + 
                                 `Professor Contact: Laily.Ajellu@georgebrown.ca\n` +
@@ -65,7 +63,8 @@ module.exports = {
                                 `Thursday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
-                                "```" + `Upcoming Labs: ${labData}` + "```");
+                                "```" + `Upcoming Labs: ${labData}` + "```"); 
 
     } 
+    
 }
