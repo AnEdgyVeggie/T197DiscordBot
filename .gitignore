@@ -11,3 +11,4 @@ shelf/
 *.env.edgy
 *.env.n197
 /records/
+deploy_commands.js

@@ -12,11 +12,12 @@ module.exports = {
             "```" + `/due_dates_submit   ‣ Submit a due date for any available class.\n` + "```" + 
             "```" + `/due_dates          ‣ View upcoming due dates.\n` + "```" +
             "```" + `/due_dates_delete   ‣ Delete a due date from the bot records.\n` + "```" +
-            "```" + `/agile              ‣ View course information for Agile Software Development.\n` + "```" +
-            "```" + `/data_structs       ‣ View course information for Data Structures and Algorithms.\n` + "```" +
-            "```" + `/open_source        ‣ View course information for Open Source Development.\n` + "```" +
-            "```" + `/web_app_dev             ‣ View course information for Web Application Development.\n` + "```" +
-            "```" + `/workplace_comp     ‣ View course information for Professional Workplace Compentencies.\n` + "```"
+            "```" + `/data_science       ‣ View course information for Applied Data Science.\n` + "```" +
+            "```" + `/capstone           ‣ View course information for Capstone Project I.\n` + "```" +
+            "```" + `/devops             ‣ View course information for Devops.\n` + "```" +
+            "```" + `/web_app_dev        ‣ View course information for Web Application Development using Java.\n` + "```" +
+            "```" + `/fullstack          ‣ View course information for Fullstack Development.\n` + "```" + 
+            "```" + `/mobile_app_dev     ‣ View course information for Mobile Application Development.\n` + "```"
          )
     }
 }
