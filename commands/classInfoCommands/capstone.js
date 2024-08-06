@@ -55,7 +55,7 @@ module.exports = {
         await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
                                 "```" + `Professor: Anjana Sha\n` + 
                                 `Professor Contact: Ashah@georgebrown.ca\n` +
-                                "```" + `Professor: Laily Ajellu\n` + 
+                                `Professor: Laily Ajellu\n` + 
                                 `Professor Contact: Laily.Ajellu@georgebrown.ca\n` +
                                 `CRN: 18341\n` +  
                                 `Class Times:\n` +
