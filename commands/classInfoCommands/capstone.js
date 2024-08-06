@@ -57,7 +57,7 @@ module.exports = {
                                 `Professor Contact: Ashah@georgebrown.ca\n` +
                                 `Professor: Laily Ajellu\n` + 
                                 `Professor Contact: Laily.Ajellu@georgebrown.ca\n` +
-                                + "```" + `CRN: 18341\n` +  
+                                "```" + `CRN: 18341\n` +  
                                 `Class Times:\n` +
                                 `Monday: 2:00 - 4:00\n` +
                                 `Thursday: 10:00 - 12:00\n` + "```" +
