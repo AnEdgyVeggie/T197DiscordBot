@@ -54,9 +54,8 @@ module.exports = {
 
 
         await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
-                                "LECTURE VIDEOS: https://www.youtube.com/playlist?list=PL5CXJP7BfMXSkvKdoXGUMn_wBTeyd42wN\n" + 
-                                "```" + `Professor: Reza Dibaj\n` + 
-                                `Professor Contact: Reza.Dibaj@georgebrown.ca\n` +
+                                `Professor: Laily Ajellu\n` + 
+                                `Professor Contact: Laily.Ajellu@georgebrown.ca\n` +
                                 `CRN: 18345\n` +  
                                 `Class Times:\n` +  
                                 `Monday: 4:00 - 5:00\n` + 
