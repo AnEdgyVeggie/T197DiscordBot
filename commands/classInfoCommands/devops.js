@@ -4,7 +4,7 @@ const fs = require('fs');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('devops')
-        .setDescription('Information about COMP3122: Devops.'),
+        .setDescription('Information about COMP3104: Devops.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -52,7 +52,7 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/290497/viewContent/8959005/View\n" +
                                 "```" + `Professor: Pritesh Patel\n` + 
                                 `Professor Contact: pritesh.patel2@georgebrown.ca\n` +
                                 `CRN: 18342\n` +  

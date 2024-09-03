@@ -7,6 +7,7 @@ shelf/
 /dataSources/
 /dataSources.local.xml
 *.env
+.env
 /node_modules
 *.env.edgy
 *.env.n197

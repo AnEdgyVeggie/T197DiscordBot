@@ -4,7 +4,7 @@ const fs = require('fs');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('fullstack')
-        .setDescription('Information about COMP2148: Full Stack Development I.'),
+        .setDescription('Information about COMP3123: Full Stack Development I.'),
     async execute(interaction) {
 
         // File paths for each due date file.
@@ -52,7 +52,7 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/290505/viewContent/8957653/View\n" +
                                 "```" + `Professor: Pritesh Patel\n` + 
                                 `Professor Contact: pritesh.patel2@georgebrown.ca\n` +
                                 "```" + `Professor: Mohammed Tawalbeh\n` + 

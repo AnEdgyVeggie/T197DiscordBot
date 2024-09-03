@@ -53,7 +53,7 @@ module.exports = {
         ]);
 
 
-        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/296163/viewContent/9128673/View\n" +
                                 "```" + `Professor: Sergio Santilli\n` + 
                                 `Professor Contact: Sergio.Santilli@georgebrown.ca\n` +
                                 `CRN: 18344\n` +  

@@ -52,7 +52,7 @@ module.exports = {
             splitLines(assignmentLines, assignmentPath)
         ]);
 
-        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/281747/viewContent/9147798/View\n" +
                                 "```" + `Professor: Anjana Sha\n` + 
                                 `Professor Contact: Ashah@georgebrown.ca\n` +
                                 `Professor: Laily Ajellu\n` + 
