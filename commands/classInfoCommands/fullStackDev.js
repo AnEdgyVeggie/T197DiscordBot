@@ -55,7 +55,7 @@ module.exports = {
         await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/290505/viewContent/8957653/View\n" +
                                 "```" + `Professor: Pritesh Patel\n` + 
                                 `Professor Contact: pritesh.patel2@georgebrown.ca\n` +
-                                "```" + `Professor: Mohammed Tawalbeh\n` + 
+                                `Professor: Mohammed Tawalbeh\n` + 
                                 `Professor Contact: mohammed.tawalbeh@georgebrown.ca\n` +
                                 `CRN: 18346\n` +  
                                 `Class Times:\n` +  

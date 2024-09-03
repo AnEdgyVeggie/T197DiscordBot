@@ -54,7 +54,7 @@ module.exports = {
 
 
         await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/292173/viewContent/9144162/View\n" +
-                                `Professor: Laily Ajellu\n` + 
+                                "```" + `Professor: Laily Ajellu\n` + 
                                 `Professor Contact: Laily.Ajellu@georgebrown.ca\n` +
                                 `CRN: 18345\n` +  
                                 `Class Times:\n` +  
