@@ -53,7 +53,7 @@ module.exports = {
         ]);
 
 
-        await interaction.reply("CSI: COMING WHEN AVAILABLE\n" +
+        await interaction.reply("CSI: https://learn.georgebrown.ca/d2l/le/content/294258/Home\n" +
                                 "```" + `Professor: Przemyslaw Pawluk\n` + 
                                 `Professor Contact: ppawluk@georgebrown.ca\n` +
                                 `CRN: 18343\n` +  
