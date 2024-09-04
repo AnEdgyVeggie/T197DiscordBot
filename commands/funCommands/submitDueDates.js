@@ -10,11 +10,12 @@ module.exports = {
                 .setDescription('Enter course name')
                 .setRequired(true)
                 .addChoices(
-                    {name: 'Web App', value: 'Web App'},
-                    {name: 'Data Structures', value: 'Data Structures'},
-                    {name: 'Workplace Comp', value: 'Workplace Comp'},
-                    {name: 'Agile', value: 'Agile'},
-                    {name: 'Open Source', value: 'Open Source'}
+                    {name: 'Java Web App Development'.toUpperCase(), value: 'Java Web App Development'.toUpperCase()},
+                    {name: 'Applied data science'.toUpperCase(), value: 'Applied data science'.toUpperCase()},
+                    {name: 'mobile app development'.toUpperCase(), value: 'mobile app development'.toUpperCase()},
+                    {name: 'full stack development I'.toUpperCase(), value: 'full stack development I'.toUpperCase()},
+                    {name: 'devops'.toUpperCase(), value: 'devops'.toUpperCase()},
+                    {name: 'capstone project I'.toUpperCase(), value: 'capstone project I'.toUpperCase()}
                 ))
         .addStringOption(option =>
             option.setName('assignment_type')
