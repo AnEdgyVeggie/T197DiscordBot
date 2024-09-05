@@ -59,8 +59,8 @@ module.exports = {
                                 `Professor Contact: mohammed.tawalbeh@georgebrown.ca\n` +
                                 `CRN: 18346\n` +  
                                 `Class Times:\n` +  
-                                `Thursdayday: 6:00 - 8:00\n` + 
-                                `Friday: 10:00 - 12:00\n` + "```" +
+                                `Thursday: 6:00 - 8:00\n` + 
+                                `Friday: 12:00 - 2:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");

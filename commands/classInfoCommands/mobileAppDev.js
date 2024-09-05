@@ -59,7 +59,7 @@ module.exports = {
                                 `CRN: 18343\n` +  
                                 `Class Times:\n` +  
                                 `Monday: 10:00 - 12:00\n` + 
-                                `Tuesday: 12:00 - 2:00\n` + "```" +
+                                `Friday: 10:00 - 12:00\n` + "```" +
                                 "```" + `Upcoming Assignments: ${assignmentData}\n` + "```" + 
                                 "```" + `Upcoming Tests: ${testData}\n` + "```" +
                                 "```" + `Upcoming Labs: ${labData}` + "```");
