@@ -56,7 +56,7 @@ module.exports = {
         console.log(`User entered Text 3: ${dueDate}`);
         console.log(`User entered Text 4: ${desc}`);
 
-        const dueDateEntry = `\n${courseName}: ${courseType}\n Description: ${desc || "No description provided"}\n due on ${dueDate}\n`;
+        const dueDateEntry = `\n${courseName}: ${courseType}\nDescription: ${desc || "No description provided"}\ndue on ${dueDate}\n`;
 
         const filePath = `./records/${courseType.toLowerCase()}.txt`;
 
