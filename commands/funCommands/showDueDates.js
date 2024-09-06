@@ -57,7 +57,7 @@ module.exports = {
             ]);
 
             // Combine the contents of the three files
-            const combinedData = `${testData}\n${assignmentData}\n${labData}`;
+            const combinedData = `\`\`\`${testData}\`\`\`\n\`\`\`${assignmentData}\`\`\`\n\`\`\`${labData}\`\`\``;
 
             // Send the combined data as a reply
             console.log('combinedData sent')
